@@ -49,8 +49,10 @@ rebuild: # Init the docker containers, use me with: make init
 	docker-compose up -d
 	cp ./configs/database.yml ./code/config/database.yml
 	docker-compose run ${APP_SERVICE} rake db:create
-	docker-compose run --rm ${APP_SERVICE} rails g scaffold note title body:text
+	# docker-compose run --rm ${APP_SERVICE} rails g scaffold note title body:text
+	git reset --hard
 	docker-compose run --rm ${APP_SERVICE} rake db:migrate
+	docker-compose run --rm ${APP_SERVICE} rake db:seed
 
 
 ######## Manage containers execution
