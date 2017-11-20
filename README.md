@@ -1,5 +1,12 @@
-GUIA DE USO
+RUN PROJECT
 ===========
+
+* make up
+
+REBUILD PROJECT
+===========
+
+* make up
 
 * make rebuild
 
@@ -8,8 +15,8 @@ GUIA DE USO
       - rake db:migrate
 
 
-COMANDOS UTILIZADOS
-===================
+COMMON COMMANDS
+===============
 
 * rails new MySite
   - Create project directories
@@ -32,3 +39,8 @@ COMANDOS UTILIZADOS
   - rake db:migrate
 
 * rails generate model Message
+  - Create file db/migrate/xxx_create_messages.rb
+
+* rake db:migrate
+
+* rake db:seed
