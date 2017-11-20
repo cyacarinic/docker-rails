@@ -44,3 +44,9 @@ COMMON COMMANDS
 * rake db:migrate
 
 * rake db:seed
+
+* rails generate controller Messages
+  - Edit app/config/routes.rb "get 'messages' => 'messages#index'"
+  - Create app/controllers/demo_controller.rb
+  - Edit "index" method, write "@messages = Message.all"
+  - Create app/views/index.html.erb and populate
