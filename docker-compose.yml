@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    hostname: app_db
+    container_name: app_db
+    image: postgres:9.6
+  app:
+    build: .
+    hostname: app
+    container_name: app
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./code:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

@@ -1,0 +1,6 @@
+<% content_for :page_heading, "Nueva Nota" %>
+<% content_for :page_actions do %>
+  <%= link_to "Volver", notes_path, class: "btn btn-sm btn-info" %>
+<% end %>
+
+<%= render 'form', note: @note %>
