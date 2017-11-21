@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roomtype: one
+  correlative: MyString
+  available: false
+  bedsExtra: 1
+  tvsExtra: 1
+  bathsExtra: 1
+
+two:
+  roomtype: two
+  correlative: MyString
+  available: false
+  bedsExtra: 1
+  tvsExtra: 1
+  bathsExtra: 1

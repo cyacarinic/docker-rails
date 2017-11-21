@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120211438) do
+ActiveRecord::Schema.define(version: 20171121003227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,4 +28,26 @@ ActiveRecord::Schema.define(version: 20171120211438) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "rooms", force: :cascade do |t|
+    t.integer  "roomtype_id"
+    t.string   "correlative"
+    t.boolean  "available"
+    t.integer  "bedsExtra"
+    t.integer  "tvsExtra"
+    t.integer  "bathsExtra"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["roomtype_id"], name: "index_rooms_on_roomtype_id", using: :btree
+  end
+
+  create_table "roomtypes", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "beds"
+    t.integer  "tvs"
+    t.integer  "baths"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_foreign_key "rooms", "roomtypes"
 end

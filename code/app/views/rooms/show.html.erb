@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Roomtype:</strong>
+  <%= @room.roomtype %>
+</p>
+
+<p>
+  <strong>Correlative:</strong>
+  <%= @room.correlative %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @room.available %>
+</p>
+
+<p>
+  <strong>Bedsextra:</strong>
+  <%= @room.bedsExtra %>
+</p>
+
+<p>
+  <strong>Tvsextra:</strong>
+  <%= @room.tvsExtra %>
+</p>
+
+<p>
+  <strong>Bathsextra:</strong>
+  <%= @room.bathsExtra %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

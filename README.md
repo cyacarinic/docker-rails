@@ -50,3 +50,8 @@ COMMON COMMANDS
   - Create app/controllers/demo_controller.rb
   - Edit "index" method, write "@messages = Message.all"
   - Create app/views/index.html.erb and populate
+
+* Migrations
+  - rails g scaffold roomtype description:string beds:integer tvs:integer baths:integer
+  - rails g scaffold room roomtype:references correlative:string available:boolean bedsExtra:integer tvsExtra:integer bathsExtra:integer
+  - rake db:migrate
